@@ -17,6 +17,7 @@ const searchPlaces = async searchField => {
     // 1 parametre de l'objet c'est ton champ
     // 2 paramètre c'est (g) global, et le (i)case and sensitive
     const regex = new RegExp(`^${searchField}`, `gi`);
+    // Remplacer par les champs que tu as besoins selon le json
     return place.name.match(regex) || place.abbr.match(regex);
   });
 
